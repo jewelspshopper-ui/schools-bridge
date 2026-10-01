@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#EDF4FA">
+<meta name="description" content="جسر المدارس — جسر يربط المعرفة بين المدارس ويحوّل التعلّم المشترك إلى تجربة ممتعة">
+<title>جسر المدارس | Schools Bridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app" id="top">
+
+  <!-- ===================== 1 · HERO ===================== -->
+  <header class="hero" id="hero">
+    <nav class="topbar">
+      <div class="tb-right">
+        <button class="menu-btn ripple" id="menuBtn" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="menuCard">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 17h24M12 25h24M12 33h24"/></svg>
+        </button>
+        <a class="brand" href="#hero" aria-label="جسر المدارس">
+          <span class="brand-txt"><b>جسر المدارس</b><i>Schools Bridge</i></span>
+        </a>
+      </div>
+      <a class="nav-pill ripple" href="#gateway">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 15h30v7a6 6 0 000 12v7H9v-7a6 6 0 000-12Z"/><path d="M24 19v10" stroke-dasharray="3 4"/></svg>
+        <span>بطاقة العبور</span>
+      </a>
+    </nav>
+
+    <div class="menu-card" id="menuCard" hidden>
+      <a href="#gateway">بوابة العبور</a>
+      <a href="#journey">رحلتك عبر الجسر</a>
+      <a href="#path">مسار التعلّم</a>
+      <a href="#games">الألعاب والتحديات</a>
+      <a href="#reading">الفهم القرائي</a>
+      <a href="#worksheets">أوراق العمل</a>
+      <a href="#assessment">محطات التقييم</a>
+      <a href="#achievements">إنجازاتي</a>
+    </div>
+
+    <div class="hero-intro reveal">
+      <h1 class="hero-title">جسر المدارس <span class="sep">|</span> <span class="latin">Schools&nbsp;Bridge</span></h1>
+      <p class="hero-sub">رحلة تعليمية تفاعلية تجمع بين التعلّم والمتعة</p>
+      <div class="hero-partners">
+        <span class="partners-label">شراكة تعليمية بين</span>
+        <p class="teachers-line">أ/ فاطمه العنزي <i>×</i> أ/ مريم المطيري</p>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <img class="stage-art" src="assets/bridge-cut.png" alt="" fetchpriority="high">
+
+      <div class="pass reveal" id="gateway">
+        <span class="pass-star" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 7l3 9.5L37 19.5l-10 3L24 32l-3-9.5L11 19.5l10-3Z"/></svg>
+        </span>
+        <h2 class="pass-title">بوابة العبور</h2>
+        <span class="pass-kicker">BRIDGE GATEWAY</span>
+        <p class="pass-greet">أهلًا بكِ في بداية الرحلة! استعدّي للتعلّم والتجربة والمتعة</p>
+
+        <form class="pass-form" id="passForm" novalidate>
+          <label class="field" for="studentName">
+            <span class="f-label">الاسم الثلاثي</span>
+            <span class="f-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="24" cy="17" r="7"/><path d="M11 39c2.8-6.6 7.4-9.6 13-9.6s10.2 3 13 9.6"/></svg>
+            </span>
+            <input id="studentName" name="studentName" type="text" inputmode="text" autocomplete="name" placeholder="الاسم الثلاثي" required>
+            <small class="f-error" hidden>فضلًا اكتبي الاسم الثلاثي</small>
+          </label>
+
+          <label class="field" for="schoolName">
+            <span class="f-label">اسم المدرسة</span>
+            <span class="f-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 40V22L24 11l15 11v18"/><path d="M19 40v-9h10v9"/><path d="M24 11V5h8"/></svg>
+            </span>
+            <input id="schoolName" name="schoolName" type="text" inputmode="text" placeholder="اسم المدرسة" required>
+            <small class="f-error" hidden>فضلًا اكتبي اسم المدرسة</small>
+          </label>
+
+          <button class="btn btn-send ripple" type="submit">
+            <span>إرسال</span>
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 24L40 8 28 40l-6.5-11.5Z"/><path d="M21.5 28.5L40 8"/></svg>
+          </button>
+        </form>
+
+        <div class="pass-done" id="passDone" hidden>
+          <span class="done-stamp" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M37 15L20 33l-8.5-8.5"/></svg>
+          </span>
+          <b class="done-title">تم تسجيل عبورك بنجاح</b>
+          <dl class="done-rows">
+            <div><dt>الطالبة</dt><dd data-pass="name">—</dd></div>
+            <div><dt>المدرسة</dt><dd data-pass="school">—</dd></div>
+          </dl>
+          <button class="btn btn-ghost ripple" type="button" id="editPass">تعديل البيانات</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== 3 · YOUR JOURNEY ===================== -->
+  <section class="section journey" id="journey">
+    <div class="section-head reveal">
+      <span class="kicker">YOUR JOURNEY ACROSS THE BRIDGE</span>
+      <h2 class="section-title">رحلتك عبر الجسر</h2>
+    </div>
+
+    <div class="snap-row reveal" id="journeyRow">
+      <article class="step-card">
+        <div class="step-track"><span class="step-node">01</span></div>
+        <div class="step-copy">
+          <span class="step-en">LEARN</span>
+          <h3>تعلّمي</h3>
+          <p>طوّري مهاراتك بأسلوب تفاعلي ممتع</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-track"><span class="step-node">02</span></div>
+        <div class="step-copy">
+          <span class="step-en">PRACTICE</span>
+          <h3>تدرّبي</h3>
+          <p>عزّزي تعلّمك بأنشطة وتطبيقات متنوعة</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-track"><span class="step-node">03</span></div>
+        <div class="step-copy">
+          <span class="step-en">ENJOY</span>
+          <h3>استمتعي</h3>
+          <p>اكتشفي متعة التعلّم من خلال الألعاب والتحديات</p>
+        </div>
+      </article>
+      <article class="step-card">
+        <div class="step-track"><span class="step-node">04</span></div>
+        <div class="step-copy">
+          <span class="step-en">MASTER</span>
+          <h3>تمكّني</h3>
+          <p>اختبري تقدّمك وعزّزي ثقتك بما تعلّمتِ</p>
+        </div>
+      </article>
+    </div>
+    <div class="carousel-ctrl">
+      <button class="car-btn" id="jPrev" type="button" aria-label="البطاقة السابقة">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 12l16 12-16 12"/></svg>
+      </button>
+      <div class="snap-dots" id="journeyDots"></div>
+      <button class="car-btn" id="jNext" type="button" aria-label="البطاقة التالية">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 12L14 24l16 12"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== 4 · LEARNING PATH ===================== -->
+  <section class="section path" id="path">
+    <div class="section-head reveal">
+      <span class="kicker">LEARNING PATH</span>
+      <h2 class="section-title">مسار التعلّم</h2>
+      <p class="path-strip">الاستكشاف ← التعلّم ← التطبيق ← التحدّي ← التمكّن</p>
+    </div>
+
+    <ol class="trail reveal" id="trail">
+      <li class="trail-node">
+        <div class="tn-card"><b>الاستكشاف</b><span>جولة أولى بين محطات الجسر</span></div>
+        <span class="tn-dot"><b class="tn-no">01</b></span>
+        <span class="tn-step">المرحلة الأولى</span>
+      </li>
+      <li class="trail-node">
+        <div class="tn-card"><b>التعلّم</b><span>مهارات جديدة بأسلوب مبسّط</span></div>
+        <span class="tn-dot"><b class="tn-no">02</b></span>
+        <span class="tn-step">المرحلة الثانية</span>
+      </li>
+      <li class="trail-node">
+        <div class="tn-card"><b>التطبيق</b><span>أنشطة تثبّت ما تعلّمتِه</span></div>
+        <span class="tn-dot"><b class="tn-no">03</b></span>
+        <span class="tn-step">المرحلة الثالثة</span>
+      </li>
+      <li class="trail-node">
+        <div class="tn-card"><b>التحدّي</b><span>ألعاب تختبر مهاراتك</span></div>
+        <span class="tn-dot"><b class="tn-no">04</b></span>
+        <span class="tn-step">المرحلة الرابعة</span>
+      </li>
+      <li class="trail-node">
+        <div class="tn-card"><b>التمكّن</b><span>ثقة وإتقان وتحقيق للأهداف</span></div>
+        <span class="tn-dot gold"><b class="tn-no">05</b></span>
+        <span class="tn-step">المرحلة الخامسة</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== 5 · STARTING POINT ===================== -->
+  <section class="section start" id="start">
+    <div class="section-head reveal">
+      <span class="kicker">STARTING POINT</span>
+      <h2 class="section-title">بوابة الانطلاق</h2>
+    </div>
+
+    <div class="launch reveal">
+      <p class="launch-copy">من هذه النقطة تنطلق رحلتك عبر الجسر، محطةً بعد محطة، حتى ضفّة الإتقان.</p>
+
+      <div class="launch-status" id="launchStatus">
+        <span class="ls-badge" id="lsBadge">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 15h30v7a6 6 0 000 12v7H9v-7a6 6 0 000-12Z"/><path d="M24 19v10" stroke-dasharray="3 4"/></svg>
+        </span>
+        <p id="lsText">عبّئي بطاقة العبور أولًا لنحفظ اسمك في الرحلة</p>
+      </div>
+
+      <div class="launch-stats">
+        <div class="lstat"><b data-count="5">0</b><span>محطات</span></div>
+        <div class="lstat"><b id="statStars" data-count="0">0</b><span>نجوم</span></div>
+        <div class="lstat"><b id="statBadges" data-count="0">0</b><span>شارات</span></div>
+      </div>
+
+      <div class="launch-actions">
+        <a class="btn btn-primary btn-lg ripple" href="#games">
+          <span>ابدئي التحدي الأول</span>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 24h22M25 13l11 11-11 11"/></svg>
+        </a>
+        <a class="btn btn-ghost ripple" href="#gateway" id="launchToPass">التعريف بنفسك أولًا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6 · GAMES & CHALLENGES ===================== -->
+  <section class="section games" id="games">
+    <div class="section-head reveal">
+      <span class="kicker">ADVENTURE GAMES</span>
+      <h2 class="section-title">ألعاب المغامرات</h2>
+      <p class="section-sub">عشر وجهات ساحرة — كل لعبة عالمٌ خاص يبني قاعدةً نحو شهادة التمكّن</p>
+    </div>
+
+    <div class="dest-grid" id="gamesGrid"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 7 · VOCABULARY ===================== -->
+  <section class="section vocabulary" id="vocabulary">
+    <div class="section-head reveal">
+      <span class="kicker">VOCABULARY GAMES</span>
+      <h2 class="section-title">ألعاب المفردات</h2>
+      <p class="section-sub">حديقة الكلمات — كلّما لعبتِ، ازدهرت مفرداتك</p>
+    </div>
+
+    <div class="dest-grid" id="vocabGrid"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 8 · READING ===================== -->
+  <section class="section reading" id="reading">
+    <div class="section-head reveal">
+      <span class="kicker">READING COMPREHENSION</span>
+      <h2 class="section-title">الفهم القرائي</h2>
+      <p class="section-sub" lang="en" dir="ltr">Your little library — open a book, enjoy reading, and check your understanding after each story</p>
+    </div>
+
+    <div class="dest-grid" id="booksGrid"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 9 · WORKSHEETS ===================== -->
+  <section class="section worksheets" id="worksheets">
+    <div class="section-head reveal">
+      <span class="kicker">WORKSHEETS</span>
+      <h2 class="section-title">منطقة أوراق العمل</h2>
+      <p class="section-sub">مكتبتك التعليمية من الأوراق — اعرضي الورقة بحجم واضح، أو اطبعيها جاهزة للحلّ على ورق A4</p>
+    </div>
+
+    <div class="ws-grid" id="sheetsGrid"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 10 · ASSESSMENT ===================== -->
+  <section class="section assessment" id="assessment">
+    <div class="section-head reveal">
+      <span class="kicker">ASSESSMENT STATIONS</span>
+      <h2 class="section-title">محطات التقييم</h2>
+      <p class="section-sub">ثلاث محطات قصيرة تراجع كل ما تعلّمتِه عبر الجسر — كل محطة تعبورها تقرّبكِ من الشهادة</p>
+    </div>
+
+    <div class="stations reveal" id="stations"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 11 · ACHIEVEMENTS ===================== -->
+  <section class="section achievements" id="achievements">
+    <div class="section-head reveal">
+      <span class="kicker">MY ACHIEVEMENTS</span>
+      <h2 class="section-title">إنجازاتي</h2>
+      <p class="section-sub" id="achGreeting">كل خطوة تعبرينها تصنع نجمة جديدة في سمائك</p>
+    </div>
+
+    <div class="jr-pass reveal" id="jrPass"><!-- student passport rendered by app.js --></div>
+
+    <div class="ach-panel reveal jr-panel">
+      <div class="ring-wrap">
+        <svg class="ring" viewBox="0 0 130 130" aria-hidden="true">
+          <circle class="ring-bg" cx="65" cy="65" r="54"/>
+          <circle class="ring-fill" id="ringFill" cx="65" cy="65" r="54"/>
+        </svg>
+        <div class="ring-txt"><b id="ringPct">0%</b><span>تقدّم التعلّم الكلي</span></div>
+      </div>
+      <div class="ach-stats">
+        <div class="astat sky"><b id="achStars">0</b><span>نجمة مضيئة</span></div>
+        <div class="astat blush"><b id="achActivities">0</b><span>نشاط مكتمل</span></div>
+        <div class="astat lav"><b id="achStations">0</b><span>محطة معبورة</span></div>
+        <div class="astat gold"><b id="achCerts">0</b><span>شهادة مُحرزة</span></div>
+      </div>
+    </div>
+
+    <h3 class="shelf-title reveal">سجلّ محطات التقييم</h3>
+    <div class="jr-stations reveal" id="jrStations"><!-- assessment journal rendered by app.js --></div>
+
+    <h3 class="shelf-title reveal">رفّ الشارات</h3>
+    <div class="badges reveal" id="badges"><!-- rendered by app.js --></div>
+  </section>
+
+  <!-- ===================== 12 · CERTIFICATES ===================== -->
+  <section class="section certificates" id="certificates">
+    <div class="section-head reveal">
+      <span class="kicker">CERTIFICATES &amp; PROGRESS</span>
+      <h2 class="section-title">الشهادات والتقدّم</h2>
+      <p class="section-sub">باسمك، وبختم الجسر الذهبي</p>
+    </div>
+
+    <div class="cert-frame reveal" id="certCard"><!-- certificate rendered by app.js --></div>
+    <div class="cert-awards reveal" id="certAwards"><!-- earned certificates rendered by app.js --></div>
+
+    <div class="progress-list reveal" id="progressList"><!-- rendered by app.js --></div>
+
+    <div class="cert-actions reveal">
+      <button class="btn btn-primary btn-lg ripple" id="printCert" type="button">
+        <span>اطبعي شهادتك</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== 13 · FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <svg class="footer-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 46 Q120 12 240 38 T480 34 T720 44 T960 30 T1200 40 T1440 34 V90 H0 Z"/>
+    </svg>
+
+    <div class="footer-inner">
+      <a class="brand brand-footer" href="#top">
+        <span class="brand-mark">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M6 30C13 17 35 17 42 30"/><path d="M4 32h40"/><path d="M15 32v-7.6M24 32V22.6M33 32v-7.6"/>
+          </svg>
+        </span>
+        <span class="brand-txt"><b>جسر المدارس</b><i>Schools Bridge</i></span>
+      </a>
+
+      <p class="footer-tagline">جسر يربط المعرفة بين المدارس ويحوّل التعلّم المشترك إلى تجربة ممتعة</p>
+
+      <div class="footer-partners">
+        <span>شراكة تعليمية بين</span>
+        <b>أ/ فاطمه العنزي <i>×</i> أ/ مريم المطيري</b>
+      </div>
+
+      <nav class="footer-links" aria-label="روابط سريعة">
+        <a href="#gateway">بوابة العبور</a>
+        <a href="#games">الألعاب</a>
+        <a href="#reading">الفهم القرائي</a>
+        <a href="#worksheets">أوراق العمل</a>
+        <a href="#achievements">إنجازاتي</a>
+      </nav>
+
+      <p class="footer-copy">جميع الحقوق محفوظة © 2026 · جسر المدارس</p>
+    </div>
+  </footer>
+</div>
+
+<!-- refined bottom navigation -->
+<nav class="dock" id="dock" aria-label="التنقل الرئيسي">
+  <a href="#hero" class="dock-item is-on" data-target="hero">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 23L24 10l15 13"/><path d="M14 21v16h20V21"/></svg>
+    <span>الرئيسية</span>
+  </a>
+  <a href="#games" class="dock-item" data-target="games">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="17" width="36" height="16" rx="8"/><path d="M16 23v4M14 25h4"/><circle cx="30.5" cy="23.5" r="1.4"/><circle cx="34.5" cy="27" r="1.4"/></svg>
+    <span>الألعاب</span>
+  </a>
+  <a href="#reading" class="dock-item" data-target="reading">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 13c-4-3.5-10-4-14-2.5V34c4-1.5 10-1 14 2.5 4-3.5 10-4 14-2.5V10.5C34 9 28 9.5 24 13Z"/><path d="M24 13v23.5"/></svg>
+    <span>القراءة</span>
+  </a>
+  <a href="#assessment" class="dock-item" data-target="assessment">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h18v7a9 9 0 01-18 0Z"/><path d="M15 11H8a7 7 0 008 9M33 11h7a7 7 0 01-8 9"/><path d="M24 24v5M17 38h14"/></svg>
+    <span>التقييم</span>
+  </a>
+  <a href="#achievements" class="dock-item" data-target="achievements">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="24" cy="17" r="7"/><path d="M11 39c2.8-6.6 7.4-9.6 13-9.6s10.2 3 13 9.6"/></svg>
+    <span>إنجازي</span>
+  </a>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script src="app.js"></script>
+</body>
+</html>
