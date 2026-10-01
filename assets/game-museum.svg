@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 300">
+  <defs>
+    <linearGradient id="mSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4DFF5"/><stop offset=".55" stop-color="#EFF2FB"/><stop offset="1" stop-color="#FAF6FB"/>
+    </linearGradient>
+    <radialGradient id="mGlow" cx=".5" cy=".4" r=".55">
+      <stop offset="0" stop-color="#FFF7E6" stop-opacity=".95"/><stop offset="1" stop-color="#FFF7E6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F1EBF8"/>
+    </linearGradient>
+    <linearGradient id="mRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CDBBE8"/><stop offset="1" stop-color="#AC93D4"/>
+    </linearGradient>
+    <linearGradient id="mGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8E3A6"/><stop offset=".55" stop-color="#EFC86B"/><stop offset="1" stop-color="#E3B454"/>
+    </linearGradient>
+    <linearGradient id="mCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDFBFF"/><stop offset="1" stop-color="#E9E2F5"/>
+    </linearGradient>
+    <linearGradient id="mPic1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BBDDF6"/><stop offset="1" stop-color="#F2B9CF"/>
+    </linearGradient>
+    <linearGradient id="mPic2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FADDE9"/><stop offset="1" stop-color="#CDBBE8"/>
+    </linearGradient>
+    <linearGradient id="mBeam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF3D6" stop-opacity=".85"/><stop offset="1" stop-color="#FFF3D6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="mSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="550" height="300" fill="url(#mSky)"/>
+  <ellipse cx="275" cy="120" rx="230" ry="120" fill="url(#mGlow)"/>
+
+  <!-- sparkles -->
+  <g fill="#F0C95E" opacity=".85">
+    <path d="M112 62l2.2 6.6 6.6 2.2-6.6 2.2-2.2 6.6-2.2-6.6-6.6-2.2 6.6-2.2z"/>
+    <path d="M452 118l1.6 4.8 4.8 1.6-4.8 1.6-1.6 4.8-1.6-4.8-4.8-1.6 4.8-1.6z"/>
+    <circle cx="74" cy="120" r="2.2"/><circle cx="482" cy="72" r="2.2"/><circle cx="140" cy="150" r="1.8"/>
+  </g>
+
+  <!-- ground -->
+  <ellipse cx="275" cy="262" rx="230" ry="14" fill="#D9CBEF" opacity=".6" filter="url(#mSoft)"/>
+
+  <!-- museum facade -->
+  <g>
+    <rect x="150" y="122" width="250" height="128" rx="6" fill="url(#mWall)" stroke="#D9CBEF" stroke-width="2"/>
+    <path d="M136 122l139-52 139 52z" fill="url(#mRoof)" stroke="#A58ACE" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="150" y="116" width="250" height="12" rx="4" fill="#FFFFFF" opacity=".55"/>
+    <!-- skylight beam -->
+    <path d="M252 128h46l22 122h-90z" fill="url(#mBeam)" opacity=".7"/>
+    <!-- golden frames on the wall -->
+    <g>
+      <rect x="172" y="148" width="46" height="36" rx="4" fill="url(#mGold)" stroke="#D8A93F" stroke-width="2"/>
+      <rect x="177" y="153" width="36" height="26" rx="3" fill="url(#mPic1)"/>
+      <path d="M181 174l8-9 6 6 5-4 9 7z" fill="#F2B9CF" opacity=".9"/>
+    </g>
+    <g>
+      <rect x="332" y="148" width="46" height="36" rx="4" fill="url(#mGold)" stroke="#D8A93F" stroke-width="2"/>
+      <rect x="337" y="153" width="36" height="26" rx="3" fill="url(#mPic2)"/>
+      <circle cx="345" cy="161" r="4" fill="#FFF3D6"/>
+      <path d="M341 174l8-10 7 7 6-5 7 8z" fill="#BBDDF6"/>
+    </g>
+    <!-- central arch door with clock above -->
+    <path d="M250 250v-52a25 25 0 0150 0v52z" fill="url(#mRoof)" stroke="#A58ACE" stroke-width="2"/>
+    <path d="M258 250v-48a17 17 0 0134 0v48z" fill="#FFF3D6" opacity=".9"/>
+    <circle cx="275" cy="176" r="11" fill="#FFFFFF" stroke="url(#mGold)" stroke-width="3"/>
+    <path d="M275 170v6l4 3" stroke="#E3B454" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <!-- columns -->
+    <g fill="url(#mCol)" stroke="#D9CBEF" stroke-width="1.6">
+      <rect x="226" y="190" width="10" height="60" rx="3"/>
+      <rect x="314" y="190" width="10" height="60" rx="3"/>
+    </g>
+    <rect x="144" y="250" width="262" height="8" rx="4" fill="#EDE5F8" stroke="#D9CBEF"/>
+  </g>
+
+  <!-- velvet rope stands -->
+  <g stroke="url(#mGold)" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M206 268v-14M256 268v-14"/>
+  </g>
+  <path d="M206 254c14 10 36 10 50 0" fill="none" stroke="#DFA8C4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="206" cy="252" r="4" fill="url(#mGold)"/><circle cx="256" cy="252" r="4" fill="url(#mGold)"/>
+</svg>
